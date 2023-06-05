@@ -15,7 +15,7 @@ const MortgageContainer = () => {
 
   return (
     <div className="mainContainer">
-      <h1>Mortgage calculator:</h1>
+      <h1>Mortgage Calculator:</h1>
       <MortgageForm onSubmit = {handleSubmit}/>
       <MortgageDisplay maxAmount={maxAmount} />
     </div>

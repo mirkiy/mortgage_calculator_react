@@ -7,10 +7,9 @@ const MortgageDisplay = ({ maxAmount }) => {
 
   return <div className="mortgageDisplay">
        <div className="formWrap">
-        <label>Other monthly commitments:</label>
+        <label>The amount you can borrow:</label>
         <input
-            // min="O"
-            // type="number"
+            type='button'
             id="maxAmount"
             name="maxAmount"
             defaultValue={maxAmount}

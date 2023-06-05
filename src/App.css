@@ -1,14 +1,30 @@
-.App {
+.mainContainer {
+  background-color: rgb(250, 212, 219);
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: 'Lora', serif;
+}
+h1 {
   text-align: center;
 }
-.mainContainer {
-  background-color: pink;
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: white;
+  background-color: rgb(34, 33, 33);
 }
-
-.mortgageDisplay {
-  background-color: blueviolet;
+input[type=submit] {
+  background-color: #801869;
 }
-
-.mortgageForm {
-  background-color: aquamarine;
+input[type=submit]:hover {
+  background-color: #9c077c;
+  cursor: pointer;
 }
