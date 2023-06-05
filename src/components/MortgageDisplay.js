@@ -4,6 +4,7 @@ const MortgageDisplay = ({ maxAmount }) => {
   if (!maxAmount) {
     return null;
   }
+  const formattedAmount = maxAmount.toLocaleString(); 
 
   return <div className="mortgageDisplay">
        <div className="formWrap">
@@ -12,7 +13,7 @@ const MortgageDisplay = ({ maxAmount }) => {
             type='button'
             id="maxAmount"
             name="maxAmount"
-            defaultValue={maxAmount}
+            defaultValue={formattedAmount}
           />
         </div>
   </div>;

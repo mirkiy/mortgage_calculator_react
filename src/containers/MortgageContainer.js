@@ -10,7 +10,6 @@ const MortgageContainer = () => {
     const yearlySalaries = (data.salary1 + data.salary2) - yearlyCommitments;
     const max = data.deposit + (yearlySalaries * 3);
     setMaxAmount(max);
-    console.log(data)
   };
 
   return (
