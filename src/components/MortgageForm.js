@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 
-const MortgageForm = () => {
+const MortgageForm = ({onSubmit}) => {
   const [formData, setFormData] = useState({
     salary1: "",
     salary2: "",
     deposit: "",
+    other: ""
   });
   const handleChange = (event) => {
     const newData = {...formData}
-    newData[event.target.name] = event.target.value
+    newData[event.target.name] = parseInt(event.target.value);
     setFormData(newData)
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
-  };
+    onSubmit(formData);
+};
 
   return (
     <div className="mortgageForm">
@@ -51,6 +52,17 @@ const MortgageForm = () => {
             id="deposit"
             name="deposit"
             value={formData.deposit}
+          />
+        </div>
+        <div className="formWrap">
+        <label>Other monthly commitments:</label>
+        <input
+            onChange={handleChange}
+            min="O"
+            type="number"
+            id="other"
+            name="other"
+            value={formData.other}
           />
         </div>
         <input onClick={handleSubmit} type='submit' value='calculate'/>
