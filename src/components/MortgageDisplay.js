@@ -5,6 +5,17 @@ const MortgageDisplay = ({ maxAmount }) => {
     return null;
   }
 
-  return <div className="mortgageDisplay">{maxAmount}</div>;
+  return <div className="mortgageDisplay">
+       <div className="formWrap">
+        <label>Other monthly commitments:</label>
+        <input
+            // min="O"
+            // type="number"
+            id="maxAmount"
+            name="maxAmount"
+            defaultValue={maxAmount}
+          />
+        </div>
+  </div>;
 };
 export default MortgageDisplay;
